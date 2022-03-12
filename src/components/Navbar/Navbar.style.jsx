@@ -23,18 +23,20 @@ export const Language = styled.span`
 `
 
 export const SearchContainer = styled.div`
-    background-color: #EEEEEE;
+    background-color: white;
     border-radius: 5px;
     display: flex;
     align-items: center;
     margin-left: 25px;
     padding: 6px;
+    width: 15em;
 `
 
 export const Input = styled.input`
     border: none;
     background-color: transparent;
     outline: none;
+    width: 16em;
 `
 
 export const Center = styled.div`
@@ -42,8 +44,17 @@ export const Center = styled.div`
     text-align: center;
 `;
 
-export const Logo = styled.h1`
-    font-weight: bold;
+
+export const LogoWaldenberger = styled.img`
+    width: 4em;
+    height: auto;
+    opacity: 0.9;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        opacity: 1;
+    }
 `
 
 export const Right = styled.div`

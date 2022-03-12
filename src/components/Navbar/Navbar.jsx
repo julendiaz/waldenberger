@@ -1,7 +1,8 @@
 import { Badge } from '@material-ui/core';
 import { Search, ShoppingCartOutlined } from '@material-ui/icons';
 import React from 'react'
-import { Container, Wrapper, Left, Language, SearchContainer, Input, Center, Logo, Right,MenuItem } from './Navbar.style';
+import { Container, Wrapper, Left, Language, SearchContainer, Input, Center, LogoWaldenberger, Right,MenuItem } from './Navbar.style';
+
 
 const Navbar = () => {
   return (
@@ -15,7 +16,7 @@ const Navbar = () => {
                 </SearchContainer>
             </Left>
             <Center>
-                <Logo>WALDENBERGER SHOP</Logo>    
+                <LogoWaldenberger src='https://user-images.githubusercontent.com/66780327/158016993-322d0217-f30e-4448-8a24-83a54ea0a59f.svg' />    
             </Center>
             <Right>
                 <MenuItem>REGISTER</MenuItem>
