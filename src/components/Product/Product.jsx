@@ -1,37 +1,7 @@
-import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from "@material-ui/icons"
-import { Container, Image, Info, Icon } from "./Product.style"
-import styled from "styled-components"; 
 
-const ProductDetailsContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    /* background-color: blue; */
-    margin-left: 1.8em;
-`
-const ProductName = styled.h3 `
-`
-const ProductPrice = styled.h3`
-    font-weight: 300;
-`
+import { Container, Image, Info, ProductDetailsContainer, ProductName, ProductPrice, ButtonAddToCard } from "./Product.style"
 
-const ButtonAddToCard = styled.button`
-    background-color: black;
-    width: 9em;
-    height: 3.3em;
-    font-size: 0.8em;
-    font-weight: 400;
-    color: white;
-    /* border-radius: 2em; */
-    padding: 0.8em;
-    border: none;
-    cursor: pointer;
-    margin-right: 1.8em;
-    transition: all 0.2s ease;
 
-    &:hover {
-        background-color: #292929;
-    }
-`
 const Product = ({item}) => {
   return (
     <Container>

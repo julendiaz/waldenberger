@@ -46,6 +46,35 @@ export const Container = styled.div`
     }
 `
 
+export const ProductDetailsContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.8em;
+`
+export const ProductName = styled.h3 `
+`
+export const ProductPrice = styled.h3`
+    font-weight: 300;
+`
+
+export const ButtonAddToCard = styled.button`
+    background-color: black;
+    width: 9em;
+    height: 3.3em;
+    font-size: 0.8em;
+    font-weight: 400;
+    color: white;
+    /* border-radius: 2em; */
+    padding: 0.8em;
+    border: none;
+    cursor: pointer;
+    margin-right: 1.8em;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background-color: #292929;
+    }
+`
 
 
 
