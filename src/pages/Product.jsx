@@ -5,16 +5,21 @@ import Footer from '../components/Footer/Footer'
 import Navbar from '../components/Navbar/Navbar'
 import Newsletter from '../components/Newsletter/Newsletter'
 import { ButtonAddToCard } from '../components/Product/Product.style'
-import { FilterContainer, Container, Wrapper, ImgContainer, InfoContainer, Image, Title, Desc, Price, Filter, FilterColor, FilterTitle, FilterSize, FilterSizeOption, AddContainer, AmountContainer, Amount } from './Product.style'
+import { FilterContainer, Container, Wrapper, ImgContainer, InfoContainer, Image, Title, Desc, Price, Filter, FilterColor, FilterTitle, FilterSize, FilterSizeOption, AddContainer, AmountContainer, Amount, OtherImagesContainer, OtherImage } from './Product.style'
 
 const Product = () => {
   return (
     <Container>
-        <Navbar />
         <Announcement />
+        <Navbar />
         <Wrapper>
             <ImgContainer>
                 <Image src="https://i.pinimg.com/originals/d8/cc/c6/d8ccc6e04706d7501ccf2c492e93a963.png" />
+                <OtherImagesContainer>
+                    <OtherImage src="https://i.pinimg.com/originals/d8/cc/c6/d8ccc6e04706d7501ccf2c492e93a963.png"></OtherImage>
+                    <OtherImage src="https://i.pinimg.com/originals/d8/cc/c6/d8ccc6e04706d7501ccf2c492e93a963.png"></OtherImage>
+                    <OtherImage src="https://i.pinimg.com/originals/d8/cc/c6/d8ccc6e04706d7501ccf2c492e93a963.png"></OtherImage>
+                </OtherImagesContainer>
             </ImgContainer>
             <InfoContainer>
                 <Title>White T-Shirt</Title>

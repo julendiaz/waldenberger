@@ -9,12 +9,41 @@ export const Wrapper = styled.div`
 
 export const ImgContainer = styled.div`
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 `
 
 export const Image = styled.img`
-    width: 100%;
-    height: 90vh;
-    object-fit: cover;
+    width: 90%;
+    height: 70vh;
+    object-fit: contain;
+`
+export const OtherImagesContainer = styled.div`
+    display: inline-flex;
+    flex-wrap: nowrap;
+    gap: 0.5em;
+    justify-content: space-between;
+    margin-top: 3em;
+`
+
+export const OtherImage = styled.img`
+    background-color: #E7E7E7;
+    width: 6em;
+    height: 6em;
+    padding: 0.4em;
+    /* border: 1px solid #DADADA; */
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.3s ease;
+    filter: saturate(50%);
+
+    &:hover {
+        background-color: #EBEBEB;
+        opacity: 0.9;
+        filter: saturate(1);
+    }
 `
 export const InfoContainer = styled.div`
     flex: 1;
