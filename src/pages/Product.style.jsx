@@ -19,6 +19,7 @@ export const Image = styled.img`
     width: 90%;
     height: 70vh;
     object-fit: contain;
+    background-color: #E7E7E7;
 `
 export const OtherImagesContainer = styled.div`
     display: inline-flex;
@@ -77,11 +78,19 @@ export const FilterContainer = styled.div`
 export const Filter = styled.div`
     display: flex;
     align-items: center;
+    border: 2px solid #C1C1C1;
+    padding: 1em 1.2em;
+    margin-right: 0.5em;
+
+    &:hover {
+        border: 2px solid #868686;
+    }
 `
 export const FilterTitle = styled.span`
-    font-size: 20px;
-    font-weight: 200;
+    font-size: 18px;
+    font-weight: 300;
     margin-right: 5px;
+    color: #868686;
 `
 export const FilterColor = styled.div`
     width: 20px;
@@ -97,6 +106,9 @@ export const FilterColor = styled.div`
 export const FilterSize = styled.select`
     margin-left: 10px;
     padding: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 `
 export const FilterSizeOption = styled.option``
 
