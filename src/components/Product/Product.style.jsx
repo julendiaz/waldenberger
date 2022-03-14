@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components/macro"
 
 export const Info = styled.div`
     opacity: 1;
@@ -59,9 +59,9 @@ export const ProductPrice = styled.h3`
 
 export const ButtonAddToCard = styled.button`
     background-color: black;
-    width: 9em;
-    height: 3.3em;
-    font-size: 0.8em;
+    width: ${props => props.big ? "11em" : "9em"};
+    height: ${props => props.big ? "3.8em" : "3.3em"};;
+    font-size: ${props => props.big ? "1em" : "0.8em"};
     font-weight: 400;
     color: white;
     /* border-radius: 2em; */
