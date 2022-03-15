@@ -1,11 +1,11 @@
-import { Add, Remove } from '@material-ui/icons'
+import { Star, StarOutline } from '@material-ui/icons'
 import React from 'react'
 import Announcement from '../components/Announcement/Announcement'
 import Footer from '../components/Footer/Footer'
 import Navbar from '../components/Navbar/Navbar'
 import Newsletter from '../components/Newsletter/Newsletter'
 import { ButtonAddToCard } from '../components/Product/Product.style'
-import { FilterContainer, Container, Wrapper, ImgContainer, InfoContainer, Image, Title, Desc, Price, Filter, FilterColor, FilterTitle, FilterSize, FilterSizeOption, AddContainer, AmountContainer, Amount, OtherImagesContainer, OtherImage } from './Product.style'
+import { RatingContainer, StarsContainer, NumberOfReviews, FilterContainer, Container, Wrapper, ImgContainer, InfoContainer, Image, Title, Desc, Price, Filter, FilterColor, FilterTitle, FilterSizeOption, AddContainer, AmountContainer, Amount, OtherImagesContainer, OtherImage } from './Product.style'
 
 const Product = () => {
   return (
@@ -23,33 +23,41 @@ const Product = () => {
             </ImgContainer>
             <InfoContainer>
                 <Title>White T-Shirt</Title>
-                <Price>23€</Price>
+                <RatingContainer>
+                    <StarsContainer>
+                        <Star style={{ color: "#DDC025"}}/>
+                        <Star style={{ color: "#DDC025"}}/>
+                        <Star style={{ color: "#DDC025"}}/>
+                        <StarOutline style={{ color: "#DDC025"}}/>
+                        <StarOutline style={{ color: "#DDC025"}}/>
+                    </StarsContainer>
+                    <NumberOfReviews>(There are 4 Reviews of this product)</NumberOfReviews>
+                </RatingContainer>
+                <Price>23.00€</Price>
                 <Desc>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus maximus lorem eget nibh varius, non fermentum lacus dictum. Aliquam vitae est eu libero tincidunt consequat. Donec a dolor lobortis urna faucibus luctus.
                 </Desc>
                 <FilterContainer>
-                    <Filter>
-                        <FilterTitle>Color</FilterTitle>
+                    <FilterTitle>COLOR</FilterTitle>
+                    <Filter>   
                         <FilterColor color="black"></FilterColor>
-                        <FilterColor color="darkblue"></FilterColor>
+                        <FilterColor color="darkblue" selected></FilterColor>
                         <FilterColor color="gray"></FilterColor>
                     </Filter>
+                </FilterContainer >
+                <FilterContainer>
+                    <FilterTitle>SIZE</FilterTitle>
                     <Filter>
-                        <FilterTitle>Size</FilterTitle>
-                        <FilterSize>
                             <FilterSizeOption>XS</FilterSizeOption>
                             <FilterSizeOption>S</FilterSizeOption>
                             <FilterSizeOption>M</FilterSizeOption>
                             <FilterSizeOption>L</FilterSizeOption>
                             <FilterSizeOption>XL</FilterSizeOption>
                             <FilterSizeOption>XXL</FilterSizeOption>
-                        </FilterSize>
                     </Filter>
                 </FilterContainer>
                 <AddContainer>
                     <AmountContainer>
-                        <Remove />
-                        <Amount>1</Amount>
-                        <Add />
+                        <Amount type="number" />
                     </AmountContainer>
                     <ButtonAddToCard big>Add to cart</ButtonAddToCard>
                 </AddContainer>

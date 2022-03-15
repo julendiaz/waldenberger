@@ -57,9 +57,31 @@ export const Title = styled.h1`
     margin-bottom: 0.2em;
 `
 
+export const RatingContainer = styled.div`
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0.4em;
+`
+
+export const StarsContainer = styled.div`
+    margin-right: 0.6em;
+    opacity: 0.7;
+    cursor: pointer;
+    &:hover {
+        opacity: 1;
+    }
+`
+
+export const NumberOfReviews = styled.p`
+    color: #ACACAC;
+    font-size: 0.9em;
+`
+
 export const Price = styled.span`
-    font-weight: 100;
-    font-size: 33px;
+    font-weight: 700;
+    font-size: 25px;
+    color: #DB4843;
 `
 
 export const Desc = styled.p`
@@ -73,65 +95,75 @@ export const FilterContainer = styled.div`
     width: 50%;
     margin: 30px 0px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 `
 export const Filter = styled.div`
     display: flex;
     align-items: center;
-    border: 2px solid #C1C1C1;
-    padding: 1em 1.2em;
     margin-right: 0.5em;
-
-    &:hover {
-        border: 2px solid #868686;
-    }
+    margin-top: 0.8em;
 `
 export const FilterTitle = styled.span`
-    font-size: 18px;
-    font-weight: 300;
+    font-size: 14px;
+    font-weight: 700;
     margin-right: 5px;
-    color: #868686;
+    color: #b0b0b0;
 `
 export const FilterColor = styled.div`
-    width: 20px;
-    height: 20px;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    border: ${ props => props.selected ? "3px solid #DB4843" : "none"};
     background-color: ${props => props.color};
-    margin: 0px 5px;
+    margin-right: 16px;
     cursor: pointer;
 
     &:hover {
         opacity: 0.7;
     }
 `
-export const FilterSize = styled.select`
-    margin-left: 10px;
-    padding: 5px;
+
+export const FilterSizeOption = styled.button`
+    width: 3em;
+    height: 3em;
+    padding: 2em;
+    border: 1.8px solid black;
     background-color: transparent;
-    border: none;
+    color: black;
     cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 18px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: black;
+        color: white;
+    }
 `
-export const FilterSizeOption = styled.option``
 
 export const AddContainer = styled.div`
-    width: 50%;
+    width: 80%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-top: 3em;
 `
 export const AmountContainer = styled.div`
     display: flex;
     align-items: center;
     font-weight: 600;
+    margin-right: 0.8em;
 `
-export const Amount = styled.span`
-    width: 30px;
-    height: 30px;
-    border: 2px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0px 5px;
-    transition: all 0.2s ease ;
+export const Amount = styled.input`
+    border: none;
+    width: 3em;
+    height: 3em;
+    font-size: 1.2em;
+    padding-left: 1em;
+    background-color: #dddddd;
 `
 
