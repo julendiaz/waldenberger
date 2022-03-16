@@ -21,6 +21,7 @@ export const FormFooter = styled.div`
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    margin-top: 0.5em;
 `
 
 export const Title = styled.h1`
