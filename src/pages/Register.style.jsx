@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 export const Container = styled.div`
     width: 100vw;
@@ -11,13 +11,22 @@ export const Container = styled.div`
 `
 
 export const Wrapper = styled.div`
-    padding: 20px;
+    padding: 3em;
     width: ${props => props.register ? '40%' : '25%'};
     background-color: white;
 `
+
+export const FormFooter = styled.div`
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+`
+
 export const Title = styled.h1`
-    font-size: 24px;
-    font-weight: 300;
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 0.5em;
 `
 export const Form = styled.form`
     display: flex;
@@ -25,8 +34,10 @@ export const Form = styled.form`
 export const Input = styled.input`
     flex: 1;
     min-width: 40%;
-    margin: ${props => props.register ? '20px 10px 0 0' : '10px 0'};
-    padding: 10px;
+    margin: ${props => props.register ? '10px 10px 0 0' : '10px 0'};
+    padding: 15px;
+    border: none;
+    background-color: #F1F1F1;
 `
 export const Agreement = styled.span`
     font-size: 12px;
