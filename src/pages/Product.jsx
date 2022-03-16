@@ -57,7 +57,7 @@ const Product = () => {
                 </FilterContainer>
                 <AddContainer>
                     <AmountContainer>
-                        <Amount type="number" />
+                        <Amount type="number" defaultValue='1' />
                     </AmountContainer>
                     <ButtonAddToCard big>Add to cart</ButtonAddToCard>
                 </AddContainer>
