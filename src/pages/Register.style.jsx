@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro'
+import { mobile } from '../responsive'
 
 export const Container = styled.div`
     width: 100vw;
@@ -14,6 +15,8 @@ export const Wrapper = styled.div`
     padding: 3em;
     width: ${props => props.register ? '40%' : '25%'};
     background-color: white;
+
+    ${mobile({ width: "70%"})}
 `
 
 export const FormFooter = styled.div`

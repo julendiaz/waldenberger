@@ -5,7 +5,7 @@ import Footer from '../components/Footer/Footer'
 import Navbar from '../components/Navbar/Navbar'
 import Newsletter from '../components/Newsletter/Newsletter'
 import { ButtonAddToCard } from '../components/Product/Product.style'
-import { RatingContainer, StarsContainer, NumberOfReviews, FilterContainer, Container, Wrapper, ImgContainer, InfoContainer, Image, Title, Desc, Price, Filter, FilterColor, FilterTitle, FilterSizeOption, AddContainer, AmountContainer, Amount, OtherImagesContainer, OtherImage } from './Product.style'
+import { RatingContainer, StarsContainer, NumberOfReviews, FilterContainer, Container, Wrapper, ImgContainer, InfoContainer, Image, Title, Desc, Price, Filter, FilterColor, FilterTitle, FilterSizeOption, AddContainer, AmountContainer, Amount, OtherImagesContainer, OtherImage, FilterSize } from './Product.style'
 
 const Product = () => {
   return (
@@ -46,14 +46,14 @@ const Product = () => {
                 </FilterContainer >
                 <FilterContainer>
                     <FilterTitle>SIZE</FilterTitle>
-                    <Filter>
+                    <FilterSize>
                             <FilterSizeOption>XS</FilterSizeOption>
                             <FilterSizeOption>S</FilterSizeOption>
                             <FilterSizeOption>M</FilterSizeOption>
                             <FilterSizeOption>L</FilterSizeOption>
                             <FilterSizeOption>XL</FilterSizeOption>
                             <FilterSizeOption>XXL</FilterSizeOption>
-                    </Filter>
+                    </FilterSize>
                 </FilterContainer>
                 <AddContainer>
                     <AmountContainer>
@@ -63,7 +63,6 @@ const Product = () => {
                 </AddContainer>
             </InfoContainer>
         </Wrapper>
-        <Newsletter />
         <Footer />
     </Container>
   )

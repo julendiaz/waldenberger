@@ -1,10 +1,13 @@
+import { css } from 'styled-components'
 import styled from 'styled-components/macro'
+import { mobile } from '../responsive'
 
 export const Container = styled.div``
 
 export const Wrapper = styled.div`
     padding: 50px;
     display: flex;
+    ${mobile({ padding: "10px", flexDirection: "column"})}
 `
 
 export const ImgContainer = styled.div`
@@ -13,6 +16,7 @@ export const ImgContainer = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    ${mobile({ marginTop: "2em"})}
 `
 
 export const Image = styled.img`
@@ -20,6 +24,7 @@ export const Image = styled.img`
     height: 70vh;
     object-fit: contain;
     background-color: #E7E7E7;
+    ${mobile({ height: "40%"})}
 `
 export const OtherImagesContainer = styled.div`
     display: inline-flex;
@@ -27,6 +32,8 @@ export const OtherImagesContainer = styled.div`
     gap: 0.5em;
     justify-content: space-between;
     margin-top: 3em;
+
+    ${mobile({ marginBottom: "2em"})}
 `
 
 export const OtherImage = styled.img`
@@ -55,6 +62,8 @@ export const Title = styled.h1`
     font-size: 2.5em;
     letter-spacing: 1.8;
     margin-bottom: 0.2em;
+
+    ${mobile({ fontSize: "2em"})}
 `
 
 export const RatingContainer = styled.div`
@@ -76,6 +85,7 @@ export const StarsContainer = styled.div`
 export const NumberOfReviews = styled.p`
     color: #ACACAC;
     font-size: 0.9em;
+    ${mobile({ display: "none"})}
 `
 
 export const Price = styled.span`
@@ -97,13 +107,27 @@ export const FilterContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    ${mobile({ width: "100%"})}
 `
-export const Filter = styled.div`
+
+const FilterDefault = css`
     display: flex;
     align-items: center;
     margin-right: 0.5em;
     margin-top: 0.8em;
 `
+export const Filter = styled.div`
+    ${FilterDefault}
+`
+
+export const FilterSize = styled.div`
+    ${FilterDefault}
+    ${mobile({ width: "100%", flexWrap: "wrap"})}
+
+`
+
+
 export const FilterTitle = styled.span`
     font-size: 14px;
     font-weight: 700;
@@ -143,6 +167,8 @@ export const FilterSizeOption = styled.button`
         background-color: black;
         color: white;
     }
+
+    ${mobile({ marginBottom: "1.5em"})}
 `
 
 export const AddContainer = styled.div`
@@ -151,6 +177,8 @@ export const AddContainer = styled.div`
     align-items: center;
     justify-content: flex-start;
     margin-top: 3em;
+
+    ${mobile({ width: "100%"})}
 `
 export const AmountContainer = styled.div`
     display: flex;

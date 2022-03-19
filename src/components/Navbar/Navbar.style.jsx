@@ -1,7 +1,9 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
+import { mobile } from '../../responsive';
 
 export const Container = styled.div`
     height: 70px;
+    ${mobile({ height: "50px"})}
 `
 
 export const Wrapper = styled.div`
@@ -9,17 +11,21 @@ export const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    ${mobile({ padding: "10px 0px"})}
 `
 
 export const Left = styled.div`
     flex: 1;
     display: flex;
     align-items: center;
+
+    ${mobile({ flex: "0"})}
 `;
 
 export const Language = styled.span`
     font-size: 14px;
     cursor: pointer;
+    ${mobile({ display: "none"})}
 `
 
 export const SearchContainer = styled.div`
@@ -30,6 +36,7 @@ export const SearchContainer = styled.div`
     margin-left: 25px;
     padding: 6px;
     width: 15em;
+    ${mobile({ display: "none"})}
 `
 
 export const Input = styled.input`
@@ -37,11 +44,13 @@ export const Input = styled.input`
     background-color: transparent;
     outline: none;
     width: 16em;
+    ${mobile({ display: "none"})}
 `
 
 export const Center = styled.div`
     flex: 1;
     text-align: center;
+    ${mobile({ textAlign: "left", paddingLeft: "1.3em"})}
 `;
 
 
@@ -55,6 +64,8 @@ export const LogoWaldenberger = styled.img`
     &:hover {
         opacity: 1;
     }
+
+    ${mobile({ width: "3em"})}
 `
 
 export const Right = styled.div`
@@ -62,6 +73,7 @@ export const Right = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    ${mobile({ justifyContent: "center", flex: "2"})}
 `;
 
 export const MenuItem = styled.div`
@@ -72,4 +84,5 @@ export const MenuItem = styled.div`
     &:hover {
         opacity: 0.6;
     }
+    ${mobile({ fontSize: "12px", marginLeft: "10px"})}
 `
