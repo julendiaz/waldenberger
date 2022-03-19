@@ -1,6 +1,7 @@
 import { Add, Remove } from '@material-ui/icons'
 import React from 'react'
 import styled from 'styled-components/macro'
+import { css } from 'styled-components'
 import Announcement from '../components/Announcement/Announcement'
 import Footer from '../components/Footer/Footer'
 import Navbar from '../components/Navbar/Navbar'
@@ -28,11 +29,19 @@ const Top = styled.div`
 
 const TopButton = styled.button`
     padding: 10px;
-    font-weight: 600;
+    font-weight: 400;
     cursor: pointer;
-    border: ${props => props.type === "filled" && "none"};
+    border-radius: 0.6em;
+    border: solid 1px black;
     background-color: ${props => props.type === "filled" ? "black" : "transparent"};
     color: ${props => props.type === "filled" && "white"};
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: black;
+        color: white;
+
+    }
 `
 
 const TopTexts = styled.div`
@@ -75,37 +84,94 @@ const Details = styled.div`
     flex-direction: column;
     justify-content: space-around;
 `
-const ProductName = styled.span``
-const ProductId = styled.span``
+
+const ProductReferenceContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    ${mobile({ marginBottom: "20px"})}
+`
+const ProductName = styled.span`
+    font-weight: 600;
+    font-size: 1.3em;
+    color: black;
+    opacity: 0.8;
+`
+const ProductId = styled.span`
+    opacity: 0.6;
+    font-weight: 300;
+    font-style: italic;
+`
+const ProductAspectsContainer = styled.div`
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+`
+
+const ProductAspectDefault = css`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.8em;
+`
+
+const ProductColorContainer = styled.div`
+    ${ProductAspectDefault}
+`
+const ProductColorTag = styled.h4`
+    opacity: 0.6;
+`
 const ProductColor = styled.div`
     width: 20px;
     height: 20px;
-    border-radius: 50%;
+    border-radius: 0.4em;
     background-color: ${props => props.color};
 `
-const ProductSize = styled.span``
+const ProductSizeContainer = styled.div`
+    ${ProductAspectDefault}
+`
+const ProductSizeTag = styled.h4`
+    opacity: 0.6;
+`
+const ProductSize = styled.span`
+    background-color: black;
+    font-weight: 600;
+    border-radius: 0.5em;
+    color: white;
+    padding: 0.3em 0.6em;
+    margin-top: 0.6em;
+`
+
+
 const PriceDetail = styled.span`
     flex: 1;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: space-between;
     flex-direction: column;
+    padding: 38px;
+
+    ${mobile({ padding: "20px", alignItems: "center"})}
 `
 
 const ProductAmountContainer = styled.div`
+    width: 6em;
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    justify-content: space-between;
 `
 const ProductAmount = styled.div`
     font-size: 24px;
+    font-weight: 300;
     margin: 5px;
     ${mobile({ margin: "5px 15px"})}
 `
 const ProductPrice = styled.div`
-    font-size: 30px;
-    font-weight: 200;
-    ${mobile({ marginBottom: "20px"})}
+    font-size: 25px;
+    color: #DB4843;
+    font-weight: 700;
+    ${mobile({ marginBottom: "10px"})}
 `
     
 const Hr = styled.hr`
@@ -119,18 +185,21 @@ const Summary = styled.div`
     flex: 1;
     border: 0.5px solid lightgray;
     border-radius: 10px;
-    padding: 20px;
+    padding: 60px;
     height: 50vh;
+
+    ${mobile({ padding: "38px"})}
 `
 
 const SummaryTitle = styled.h1`
-    font-weight: 200;
+    font-weight: 700;
+    font-size: 1.8em;
 `
 const SummaryItem = styled.h1`
     margin: 30px 0px;
     display: flex;
     justify-content: space-between;
-    font-weight: ${props => props.type === "total" ? "500" : "300"};
+    font-weight: ${props => props.type === "total" ? "700" : "300"};
     font-size: ${props => props.type === "total" ? "24px" : "20px"};
 `
 const SummaryItemText = styled.span``
@@ -145,32 +214,44 @@ const Cart = () => {
         <Wrapper>
             <Title>Your Cart</Title>
             <Top>
-                <TopButton>CONTINUE SHOPPING</TopButton>
+                <TopButton>Continue Shopping</TopButton>
                 <TopTexts>
                     <TopText>Shopping Bag(2)</TopText>
                     <TopText>Your wishlist</TopText>
                 </TopTexts>
-                <TopButton type="filled">CHECKOUT NOW</TopButton>
+                <ButtonAddToCard type="filled">Checkout Now</ButtonAddToCard>
             </Top>
             <Bottom>
                 <Info>
-                    <Product>
+                <Product>
                         <ProductDetail>
-                            <Image src="https://www.pinclipart.com/picdir/big/76-760505_t-shirt-png-red-t-shirt-template-png.png"/>
+                            <Image src="https://i.pinimg.com/originals/d8/cc/c6/d8ccc6e04706d7501ccf2c492e93a963.png"/>
                             <Details>
-                                <ProductName><b>Product:</b> JESSIE THUNDER SHOES</ProductName> 
-                                <ProductId><b>ID:</b> 43782974</ProductId>
-                                <ProductColor color="black" />
-                                <ProductSize><b>Size:</b> 37.5</ProductSize>
+                                <ProductReferenceContainer>
+                                    <ProductName>Hakura T-Shirt</ProductName>
+                                    <ProductId>43782974</ProductId>
+                                </ProductReferenceContainer>
+                                <ProductAspectsContainer>
+                                    <ProductColorContainer>
+                                        <ProductColorTag>Color</ProductColorTag>
+                                        <ProductColor color="gray" />
+                                    </ProductColorContainer>
+                                    <ProductSizeContainer>
+                                        <ProductSizeTag>Size</ProductSizeTag>
+                                        <ProductSize>M</ProductSize>
+                                    </ProductSizeContainer>
+                                    
+                                </ProductAspectsContainer>
+                                
                             </Details>
                         </ProductDetail>
                         <PriceDetail>
+                           <ProductPrice>20€</ProductPrice>
                            <ProductAmountContainer>
                                <Add />
                                     <ProductAmount>2</ProductAmount>
                                <Remove />
                            </ProductAmountContainer> 
-                           <ProductPrice>30€</ProductPrice>
                         </PriceDetail>
                     </Product>
                     <Hr />
@@ -178,24 +259,36 @@ const Cart = () => {
                         <ProductDetail>
                             <Image src="https://i.pinimg.com/originals/d8/cc/c6/d8ccc6e04706d7501ccf2c492e93a963.png"/>
                             <Details>
-                                <ProductName><b>Product:</b> HAKURA T-SHIRT</ProductName>
-                                <ProductId><b>ID:</b> 43782974</ProductId>
-                                <ProductColor color="gray" />
-                                <ProductSize><b>Size:</b> M</ProductSize>
+                                <ProductReferenceContainer>
+                                    <ProductName>Hakura T-Shirt</ProductName>
+                                    <ProductId>43782974</ProductId>
+                                </ProductReferenceContainer>
+                                <ProductAspectsContainer>
+                                    <ProductColorContainer>
+                                        <ProductColorTag>Color</ProductColorTag>
+                                        <ProductColor color="gray" />
+                                    </ProductColorContainer>
+                                    <ProductSizeContainer>
+                                        <ProductSizeTag>Size</ProductSizeTag>
+                                        <ProductSize>M</ProductSize>
+                                    </ProductSizeContainer>
+                                    
+                                </ProductAspectsContainer>
+                                
                             </Details>
                         </ProductDetail>
                         <PriceDetail>
+                           <ProductPrice>20€</ProductPrice>
                            <ProductAmountContainer>
                                <Add />
                                     <ProductAmount>2</ProductAmount>
                                <Remove />
                            </ProductAmountContainer> 
-                           <ProductPrice>20€</ProductPrice>
                         </PriceDetail>
                     </Product>
                 </Info>
                 <Summary>
-                    <SummaryTitle>ORDER SUMMARY</SummaryTitle>
+                    <SummaryTitle>Order Summary</SummaryTitle>
                     <SummaryItem>
                         <SummaryItemText>Subtotal</SummaryItemText>
                         <SummaryItemPrice>50€</SummaryItemPrice>
