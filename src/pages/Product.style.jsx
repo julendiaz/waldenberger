@@ -24,6 +24,7 @@ export const Image = styled.img`
     height: 70vh;
     object-fit: contain;
     background-color: #E7E7E7;
+    border-radius: 1em;
     ${mobile({ height: "40%"})}
 `
 export const OtherImagesContainer = styled.div`
@@ -42,6 +43,7 @@ export const OtherImage = styled.img`
     height: 6em;
     padding: 0.4em;
     /* border: 1px solid #DADADA; */
+    border-radius: 0.6em;
     cursor: pointer;
     opacity: 1;
     transition: all 0.3s ease;
@@ -137,7 +139,7 @@ export const FilterTitle = styled.span`
 export const FilterColor = styled.div`
     width: 23px;
     height: 23px;
-    border-radius: 50%;
+    border-radius: 0.5em;
     border: ${ props => props.selected ? "3px solid #DB4843" : "none"};
     background-color: ${props => props.color};
     margin-right: 16px;
@@ -156,7 +158,7 @@ export const FilterSizeOption = styled.button`
     background-color: transparent;
     color: black;
     cursor: pointer;
-    border-radius: 50%;
+    border-radius: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -193,5 +195,6 @@ export const Amount = styled.input`
     font-size: 1.2em;
     padding-left: 1em;
     background-color: #dddddd;
+    border-radius: 0.6em;
 `
 

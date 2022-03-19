@@ -15,6 +15,7 @@ export const Wrapper = styled.div`
     padding: 3em;
     width: ${props => props.register ? '40%' : '25%'};
     background-color: white;
+    border-radius: 1em;
 
     ${mobile({ width: "70%"})}
 `
@@ -42,6 +43,7 @@ export const Input = styled.input`
     padding: 15px;
     border: none;
     background-color: #F1F1F1;
+    border-radius: 0.7em;
 `
 export const Agreement = styled.span`
     font-size: 12px;

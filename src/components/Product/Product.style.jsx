@@ -14,6 +14,7 @@ export const Info = styled.div`
     justify-content: space-between;
     transition: all 0.5s ease;
     padding-bottom: 1.3em;
+    border-radius: 1em;
 `
 
 export const Image = styled.img`
@@ -34,6 +35,7 @@ export const Container = styled.div`
     background-color: white;
     position: relative;
     cursor: pointer;
+    border-radius: 1em;
 
     &:hover ${Info}{
         opacity: 1;
@@ -64,7 +66,7 @@ export const ButtonAddToCard = styled.button`
     font-size: ${props => props.big ? "1em" : "0.8em"};
     font-weight: 400;
     color: white;
-    /* border-radius: 2em; */
+    border-radius: 0.8em; 
     padding: 0.8em;
     border: none;
     cursor: pointer;
