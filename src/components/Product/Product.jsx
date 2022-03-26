@@ -2,14 +2,16 @@
 import { Container, Image, Info, ProductDetailsContainer, ProductName, ProductPrice, ButtonAddToCard } from "./Product.style"
 
 
-const Product = ({item}) => {
+const Product = ({product}) => {
+
+  console.log(product);
   return (
     <Container>
-        <Image src={item.img} />
+        <Image src={product.image.url} />
         <Info>
             <ProductDetailsContainer>
-                <ProductName>White t-shirt</ProductName>
-                <ProductPrice>23.00€</ProductPrice>
+                <ProductName>{product.name}</ProductName>
+                <ProductPrice>{product.price.formatted_with_symbol}</ProductPrice>
             </ProductDetailsContainer>
             <ButtonAddToCard>Add to Cart</ButtonAddToCard>
         </Info>

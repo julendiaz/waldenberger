@@ -45,34 +45,50 @@ export const sliderItems = [
     {
       id:1,
       img:"https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png",
+      name: "Guitar T-shirt",
+      price: "18.00€",
     },
     {
       id:2,
       img:"https://i.pinimg.com/originals/d8/cc/c6/d8ccc6e04706d7501ccf2c492e93a963.png",
+      name: "White T-shirt",
+      price: "12.00€",
     },
     {
       id:3,
       img:"https://www.pinclipart.com/picdir/big/76-760505_t-shirt-png-red-t-shirt-template-png.png",
+      name: "Red T-shirt",
+      price: "17.00€",
     },
     {
       id:4,
       img:"https://purepng.com/public/uploads/large/construction-material-7vp.png",
+      name: "Ladrillo",
+      price: "33.00€",
     },
     {
       id:5,
       img:"https://www.kindpng.com/picc/m/167-1675156_transparent-construction-hat-clipart-safety-helmet-transparent-hd.png",
+      name: "Yellow Hat",
+      price: "40.00€",
     },
     {
       id:6,
       img:"https://i.pinimg.com/originals/d8/cc/c6/d8ccc6e04706d7501ccf2c492e93a963.png",
+      name: "White T-shirt",
+      price: "12.00€",
     },
     {
       id:7,
       img:"https://www.pinclipart.com/picdir/big/76-760505_t-shirt-png-red-t-shirt-template-png.png",
+      name: "Red T-shirt",
+      price: "13.00€",
     },
     {
       id:8,
       img:"https://www.pinclipart.com/picdir/big/76-760505_t-shirt-png-red-t-shirt-template-png.png",
+      name: "Red T-shirt",
+      price: "14.00€",
     },
   ]
   
